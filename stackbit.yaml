@@ -1,0 +1,112 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  component:
+    type: page
+    label: Component
+    folder: _includes/components
+    match: '*'
+    fields: []
+  page:
+    type: page
+    label: Page
+    folder: _pages
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: narrow
+        label: Narrow
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: images
+        label: Images
+        items:
+          type: string
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: list
+        name: images
+        label: Images
+        items:
+          type: string
+  project:
+    type: page
+    label: Project
+    folder: _projects
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+  list:
+    type: page
+    label: List
+    folder: list
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: narrow
+        label: Narrow
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: show_profile
+        label: Show Profile
+  nav:
+    type: data
+    label: Nav
+    file: nav.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: href
+          label: Href
+  profile:
+    type: data
+    label: Profile
+    file: profile.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: caption
+          label: Caption
+        - type: string
+          name: href
+          label: Href
+        - type: image
+          name: icon
+          label: Icon

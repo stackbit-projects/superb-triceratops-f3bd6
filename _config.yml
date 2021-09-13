@@ -1,0 +1,49 @@
+permalink: '/:categories/:year/:month/:day/:title.html'
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: <!--more-->
+title: Friday Theme
+name: Friday Theme
+avatar: /theme/img/avatar.jpg
+baseurl: ''
+include:
+  - _pages
+  - _portfolio
+sass:
+  sass_dir: theme/_sass
+  style: compressed
+collections:
+  projects:
+    output: true
+    title: Projects
+    permalink: '/:collection/:name.html'
+  portfolio:
+    output: true
+    title: portfolio
+    permalink: '/:collection/:name.html'
+defaults:
+  - scope:
+      path: ''
+    values:
+      show_profile: true
+  - scope:
+      path: _posts
+    values:
+      show_profile: false
+      layout: defaults/post
+  - scope:
+      path: _portfolio
+    values:
+      show_profile: false
+      layout: defaults/portfolio
+  - scope:
+      path: _projects
+    values:
+      show_profile: false
+      layout: defaults/project
+  - scope:
+      path: list
+    values:
+      show_profile: false
+      layout: defaults/list
+url: ''
